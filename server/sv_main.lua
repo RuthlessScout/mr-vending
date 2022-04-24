@@ -1,5 +1,8 @@
 --SERVER
+ESX = nil
 
+
+TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent("mr-vending:server:check")
 AddEventHandler("mr-vending:server:check", function(item,price)
