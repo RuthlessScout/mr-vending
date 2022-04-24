@@ -6,7 +6,7 @@ Citizen.CreateThread(function()
         `prop_vend_soda_02`,
         `prop_vend_water_01`,
     }
-    exports['int_eye']:AddTargetModel(drinkvendings, {
+    exports[Config.Target]:AddTargetModel(drinkvendings, {
         options = {
             {
                 event = "mr-vending:sodamach",
@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
         `prop_vend_snak_01`,
         `prop_vend_snak_01_tu`,    
     }
-    exports['int_eye']:AddTargetModel(foodvendings, {
+    exports[Config.Target]:AddTargetModel(foodvendings, {
         options = {
             {
                 event = "mr-vending:vendingmach",
@@ -35,7 +35,7 @@ Citizen.CreateThread(function()
     local coffeevendings = { 
         `prop_vend_coffe_01`,
     }
-    exports['int_eye']:AddTargetModel(coffeevendings, {
+    exports[Config.Target]:AddTargetModel(coffeevendings, {
         options = {
             {
                 event = "mr-vending:coffemach",
@@ -53,7 +53,7 @@ Citizen.CreateThread(function()
         `watercooler_bottle001`,
         `prop_vend_water_01`,
     }
-    exports['int_eye']:AddTargetModel(vodu, {
+    exports[Config.Target]:AddTargetModel(vodu, {
         options = {
             {
                 event = "mr-vending:waterdis",
@@ -83,7 +83,7 @@ RegisterNetEvent('mr-vending:sodamach', function()
             header = "Количка 7$",
             txt = "Derby или нищо!",
             params = {
-                event = "itemа1",
+                event = "sodaitem1",
                 args = {
                     number = 1,
                     id = 2
@@ -95,7 +95,7 @@ RegisterNetEvent('mr-vending:sodamach', function()
             header = "Водичка 5$",
             txt = "Хидратацията е много важно нещо",
             params = {
-                event = "itemа2",
+                event = "sodaitem2",
                 args = {
                     number = 2,
                     id = 3
@@ -107,7 +107,7 @@ RegisterNetEvent('mr-vending:sodamach', function()
             header = "Енергиина напитка 12$",
             txt = "Hell-че брат",
             params = {
-                event = "itemа3",
+                event = "sodaitem3",
                 args = {
                     number = 3,
                     id = 4
@@ -126,10 +126,10 @@ RegisterNetEvent('mr-vending:vendingmach', function()
         },
         {
             id = 2,
-            header = "Пакетиран сандвич 10$",
+            header = "Пакетиран сандвич 5$",
             txt = "Старичък и леко изсъхнал",
             params = {
-                event = "item1",
+                event = "vendingitem1",
                 args = {
                     number = 1,
                     id = 2
@@ -138,10 +138,10 @@ RegisterNetEvent('mr-vending:vendingmach', function()
         },
         {
             id = 3,
-            header = "Фафла 8$",
+            header = "Фафла 5$",
             txt = "Кат' на Криско, ама по-хубави",
             params = {
-                event = "item2",
+                event = "vendingitem2",
                 args = {
                     number = 2,
                     id = 3
@@ -150,10 +150,10 @@ RegisterNetEvent('mr-vending:vendingmach', function()
         },
         {
             id = 4,
-            header = "Сливенски поничка 8$",
+            header = "Сливенски поничка 5$",
             txt = "Сладки и мазни, като...",
             params = {
-                event = "item3",
+                event = "vendingitem3",
                 args = {
                     number = 3,
                     id = 4
@@ -172,10 +172,10 @@ RegisterNetEvent('mr-vending:coffemach', function()
         },
         {
             id = 2,
-            header = "Кафенце 10$",
+            header = "Кафенце 5$",
             txt = "Абе става, като за от машина",
             params = {
-                event = "itemа4",
+                event = "coffeeitem",
                 args = {
                     number = 1,
                     id = 2
@@ -197,7 +197,7 @@ RegisterNetEvent('mr-vending:waterdis', function()
             header = "Водичка 5$",
             txt = "Абе става, като за от машина",
             params = {
-                event = "itemа2",
+                event = "wateritem",
                 args = {
                     number = 1,
                     id = 2
