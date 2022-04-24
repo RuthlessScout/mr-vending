@@ -1,5 +1,6 @@
 --CLIENT
 local player = PlayerPedId(-1)
+
 Citizen.CreateThread(function()
    local drinkvendings = { 
         `prop_vend_soda_01`,
