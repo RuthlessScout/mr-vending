@@ -1,3 +1,3 @@
 Config = {}
 
-Config.Target = "int_eye"
+Config.Target = "qtarget"
