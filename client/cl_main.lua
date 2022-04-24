@@ -1,5 +1,5 @@
 --CLIENT
-
+local player = PlayerPedId(-1)
 Citizen.CreateThread(function()
    local drinkvendings = { 
         `prop_vend_soda_01`,
@@ -211,46 +211,72 @@ end)
 
 RegisterNetEvent("vendingitem1")
 AddEventHandler("vendingitem1", function()
-    TriggerServerEvent("mr-vending:server:check",Config.VendingItem1)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","sandwich",5)
 end)
 
 RegisterNetEvent("vendingitem2")
 AddEventHandler("vendingitem2", function()
-    TriggerServerEvent("mr-vending:server:check",Config.VendingItem2)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","donut",5)
 end)
 
 RegisterNetEvent("vendingitem3")
 AddEventHandler("vendingitem3", function()
-    TriggerServerEvent("mr-vending:server:check",Config.VendingItem3)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","banana",5)
 end)
 
 --Вендинг
 
 RegisterNetEvent("sodaitem1")
 AddEventHandler("sodaitem1", function()
-    TriggerServerEvent("mr-vending:server:check",Config.SodaItem1)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","water",5)
+    
+    
 end)
 
 RegisterNetEvent("sodaitem2")
 AddEventHandler("sodaitem2", function()
-    TriggerServerEvent("mr-vending:server:check",Config.SodaItem2)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","cocacola",5)
 end)
 
 RegisterNetEvent("sodaitem3")
 AddEventHandler("sodaitem3", function()
-    TriggerServerEvent("mr-vending:server:check",Config.SodaItem3)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","energy",5)
 end)
 
 --
 
 RegisterNetEvent("coffeeitem")
 AddEventHandler("coffeeitem", function()
-    TriggerServerEvent("mr-vending:server:check",Config.CoffeeItem)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","coffee",5)
 end)
 
 RegisterNetEvent("wateritem")
 AddEventHandler("wateritem", function()
-    TriggerServerEvent("mr-vending:server:check",Config.WaterItem)
+    TaskPlayAnim(player, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0, -1.0, -1, 1, 0, false, false, false)
+    Citizen.Wait(2000)
+    ClearPedTasksImmediately(player)
+    TriggerServerEvent("mr-vending:server:check","water", 5)
 end)
 
 
